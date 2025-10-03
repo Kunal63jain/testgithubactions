@@ -29,5 +29,8 @@ jobs:
             pip install -r requirements.txt
             pip install pytest
 
-        - name: Test with pytest
-          run: pytest
+        - name: Run tests
+          run: |
+            python -m pytest tests/ --maxfail=1 --disable-warnings -q
+          env:
+            PYTHONPATH: ${{ github.workspace}}
