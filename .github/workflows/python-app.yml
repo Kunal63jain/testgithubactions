@@ -31,6 +31,6 @@ jobs:
 
         - name: Run tests
           run: |
-            python -m pytest tests/ --maxfail=1 --disable-warnings -q
+                 python -m pytest tests/ --maxfail=1 --disable-warnings -q
           env:
             PYTHONPATH: ${{ github.workspace}}
